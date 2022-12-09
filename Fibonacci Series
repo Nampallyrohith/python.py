@@ -1,0 +1,37 @@
+# method 1 
+N = int(input())
+fibo_series = []
+fibo_series.append(0)
+fibo_series.append(1)
+
+if N<=1:
+    fibo_series.pop()
+    print(fibo_series)
+else:
+    for i in range(N-2):
+        i = fibo_series[-2] + fibo_series[-1]
+        fibo_series.append(i)
+    print(fibo_series)
+ 
+ 
+ 
+ 
+ 
+    
+# method - 2 
+
+def fibonacci(n) :
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1)+fibonacci(n-2)
+def get_fibonacci series(n):
+    fibonacci series = []
+    for i in range(n):
+        term = fibonacci(i)
+        fibonacci series.append(term)
+    return fibonacci series
+    
+n = int(input())
+result = get_fibonacci series (n)
+print(result)
