@@ -1,0 +1,22 @@
+str_int = input().split(",")  #taking the input 
+
+num_list = []   #creating new list
+for i in str_int:
+    if i.isdigit():   #check is it number
+        num_list.append(i)    #if yes the value updated in new list
+        
+        
+def converting_str_into_int(num_list):  #converting the string to integer
+     new_lst = []
+     for i in num_list:
+         i = int(i)
+         new_lst.append(i)
+     return new_lst
+print(converting_str_into_int(num_list))   #funtion calling
+
+
+
+
+
+
+ 
