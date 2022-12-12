@@ -1,0 +1,23 @@
+def convert_into_int(str_list):       # converting each string to int
+    int_list = []                     #creating the list
+    for i in str_list:
+        int_list.append(int(i))
+    return int_list                   #returns all the integers which are appended to int_list
+def check_list_same_or_not(nums_list):
+    last_i = len(nums_list) - 1       #it should be less than by 1 of length of the nums_list
+    repeated_num_list = []
+    for i in range(len(nums_list)):
+        if i < last_i:                #checks the condition
+            if nums_list[i] == nums_list[i+1]:  #check all the elements in the list are same
+                result = True
+            else:                     #if not possible then here which are repeated numbers returns
+                repeated_num_list.extend([nums_list[i], nums_list[i+1]])
+                result = set(repeated_num_list)
+                result = list(result)
+                result.sort()
+    return result
+            
+str_list = input().split(" ")
+nums_list = convert_into_int(str_list)
+
+print(check_list_same_or_not(nums_list))
